@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Love ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#08020b;color:#fff;display:flex;align-items:center;justify-content:center;letter-spacing:.01em}
+body:before{content:"";position:fixed;inset:0;background:
+radial-gradient(circle at 20% 25%,rgba(125,0,55,.55),transparent 35%),
+radial-gradient(circle at 80% 75%,rgba(78,0,120,.5),transparent 38%),
+linear-gradient(135deg,#09020d,#22000f 48%,#10001f);z-index:-2}
+.glow{position:fixed;width:55vw;height:55vw;border-radius:50%;background:rgba(125,0,65,.14);filter:blur(70px);animation:pulse 5s infinite alternate;z-index:-1}
+@keyframes pulse{to{transform:scale(1.25);opacity:.7}}
+.card{width:min(92vw,560px);min-height:78vh;max-height:92vh;padding:38px 28px;border:1px solid rgba(255,90,130,.35);
+border-radius:28px;background:rgba(15,2,15,.68);backdrop-filter:blur(12px);box-shadow:0 0 45px rgba(140,0,70,.32),inset 0 0 35px rgba(255,0,80,.04);
+display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+h1{font-size:clamp(34px,10vw,56px);margin:0 0 8px;color:#fff; font-weight:300;letter-spacing:.08em;text-shadow:0 0 7px rgba(255,45,95,.9),0 0 22px rgba(255,0,75,.55),0 0 42px rgba(150,0,70,.35);animation:titleGlow 2.8s ease-in-out infinite alternate}
+h2{font-size:clamp(18px,5vw,25px);font-weight:300;letter-spacing:.04em;color:#e8d9eb;margin:0 0 22px}
+p{font-size:clamp(16px,4.2vw,19px);font-weight:300;line-height:1.65;letter-spacing:.02em;color:#eee1e8;margin:8px 0}
+@keyframes titleGlow{from{opacity:.86;text-shadow:0 0 5px rgba(255,45,95,.7),0 0 16px rgba(255,0,75,.35)}to{opacity:1;text-shadow:0 0 9px rgba(255,70,110,1),0 0 28px rgba(255,0,75,.7),0 0 50px rgba(150,0,70,.4)}}
+.tease{margin-top:18px;font-style:italic;color:#ffb4ca}
+button{margin-top:25px;border:1px solid rgba(255,113,155,.65);background:rgba(45,0,48,.62);
+color:#fff;padding:14px 25px;border-radius:30px;font-size:15px;font-weight:400;letter-spacing:.03em;font-family:inherit;cursor:pointer;box-shadow:0 0 20px rgba(255,30,100,.18)}
+button:active{transform:scale(.97)}
+#reply{height:0;opacity:0;transition:.5s;color:#ffc5d9;margin-top:15px}
+#reply.show{height:auto;opacity:1}
+.gif{width:min(260px,70vw);height:125px;margin:5px 0 13px;border-radius:18px;border:1px dashed rgba(255,150,190,.3);display:flex;align-items:center;justify-content:center;color:#bda0b5;font-size:13px}
+.heart{position:fixed;bottom:-40px;font-size:20px;animation:rise linear infinite;opacity:.75;pointer-events:none}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.8}100%{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.small{font-size:13px!important;color:#b99aaa!important;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="card">
+  <h1>My Love <span aria-label="red heart">❤️</span></h1>
+  <h2>For the girl I miss a little too much… 💋</h2>
+
+  <div class="gif"><img src="Love GIF.gif" alt="Love"></div>
+
+  <p>Distance may keep you away from me,<br>but somehow you still know exactly how to stay on my mind.</p>
+  <p class="tease">So, My Baby… be a little mischievous for me tonight. 😏</p>
+  <p>Send me one of those <b>beautiful snaps</b> that makes me smile…<br>
+  or, if you're feeling brave, a <b>naughty little surprise</b>. 💋❤️‍🔥</p>
+
+  <button onclick="document.getElementById('reply').classList.toggle('show')">
+    Tap if you're feeling naughty 💋
+  </button>
+  <div id="reply">Then don't keep your favorite person waiting… 😏💋❤️</div>
+  <p class="small">Made with a little love, a little longing, and a lot of kisses. ❤️‍🔥</p>
+</div>
+
+<script>
+const icons=["❤️","💋","💕","❤️‍🔥","💜","♥️","💋"];
+for(let i=0;i<34;i++){
+  const h=document.createElement("div"); h.className="heart"; h.textContent=icons[Math.floor(Math.random()*icons.length)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(5+Math.random()*8)+"s";
+  h.style.animationDelay=(-Math.random()*10)+"s";
+  h.style.fontSize=(14+Math.random()*18)+"px";
+  document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
